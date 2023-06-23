@@ -42,8 +42,19 @@ TinyUSB TinyUSB Device
 	Generic Desktop/Keyboard,Mouse,Pointer
 ```
 
-## Arguments
+## Building
 
+The hidscan utility depends on the hidapi library. On debian-like systems, do:
+```
+$ sudo apt install libhidapi-dev
+```
+
+To build hidcan, use:
+```
+$ make
+```
+
+## Arguments
 
 ### --verbose / -v
 
