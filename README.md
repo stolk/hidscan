@@ -54,6 +54,15 @@ To build hidcan, use:
 $ make
 ```
 
+## Limitations
+
+The hidscan tool knows the description of hid usage pages. 
+Not all sub-tables are included, but it will correctly describe the most used one "Generic Desktop."
+
+The names were taken from:
+https://www.usb.org/document-library/hid-usage-tables-14 (01/27/2023)
+
+
 ## Arguments
 
 ### --verbose / -v
