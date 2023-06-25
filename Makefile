@@ -1,3 +1,7 @@
+CFLAGS?=-g -O
+CFLAGS+=`pkgconf hidapi-hidraw --cflags`
+LDFLAGS+=`pkgconf hidapi-hidraw --libs`
+
 hidscan: hidscan.c
-	cc hidscan.c -lhidapi-hidraw -o hidscan
+	$(CC) $(CFLAGS) hidscan.c -o hidscan $(LDFLAGS)
 
