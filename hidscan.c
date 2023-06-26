@@ -196,8 +196,10 @@ int hidscan_select_and_open_device( struct hid_device_info* devs )
 
 	while (cur_dev)
 	{
-		wcpncpy(device->manufacturer_string, cur_dev->manufacturer_string, STRLEN-1);
-		wcpncpy(device->product_string,      cur_dev->product_string,      STRLEN-1);
+		if (cur_dev->manufacturer_string)
+			wcpncpy(device->manufacturer_string, cur_dev->manufacturer_string, STRLEN-1);
+		if (cur_dev->product_string)
+			wcpncpy(device->product_string,      cur_dev->product_string,      STRLEN-1);
 		stpncpy(device->path,                cur_dev->path,                STRLEN-1);
 		device->usage_page = cur_dev->usage_page;
 		device->usage = cur_dev->usage;
