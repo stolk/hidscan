@@ -28,6 +28,7 @@
 #include "generic_desktop_usage_names.h"
 #include "lighting_and_illumination_names.h"
 #include "consumer_usage_names.h"
+#include "digitizer_usage_names.h"
 
 #if defined(_WIN32)
 #	define EX_IOERR	EXIT_FAILURE
@@ -88,6 +89,12 @@ const char* usage_name(uint16_t pagenr, uint16_t usagenr)
 		if (usagenr >= 0x2d5)
 			return "Reserved";
 		return consumer_usage_names[usagenr];
+	}
+	if (pagenr == 0x0d)
+	{
+		if (usagenr >= 0xb1)
+			return "Reserved";
+		return digitizer_usage_names[usagenr];
 	}
 	if (pagenr == 0x59)
 	{
