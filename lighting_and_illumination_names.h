@@ -1,7 +1,7 @@
 const char* lighting_and_illumination_names[0x72] =
 {
 "Undeﬁned",
-"LampArray CA",
+"LampArray",
 "LampArrayAttributesReport",
 "LampCount",
 "BoundingBoxWidthInMicrometers",
@@ -113,5 +113,5 @@ const char* lighting_and_illumination_names[0x72] =
 "Reserved",
 "Reserved",
 "LampArrayControlReport",
-"AutonomousMode DV",
+"AutonomousMode",
 };
